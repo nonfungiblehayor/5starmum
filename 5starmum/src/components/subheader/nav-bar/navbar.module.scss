@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$weight400 : 400;
+$weight600 : 600;
+$btnBg : #EBEBEB;
+$brandColor: #EF7528;
+$borderColor: #E3E3E3;
+$textFont: 'Inter', sans-serif;
+
+
+@mixin coldisplayStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin rowdisplayStyle {
+    display: flex;
+    flex-direction: row;
+}
+
+.navLink {
+    width: 330px;
+    @include coldisplayStyle();
+    padding: 40px;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
+    border-right: 1px solid $borderColor;
+    .link {
+        @include coldisplayStyle();
+        width: 250px;
+        .ticks {
+            display: none
+        }
+        .detailsPoint {
+            @include rowdisplayStyle();
+            align-items: center;
+           justify-content: space-between;
+            ul {
+                list-style-type: square;
+                li {
+                    font-size: 18px;
+                    font-family: $textFont;
+                    font-weight: 400;
+                }
+            }
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        .progress {
+            width: 250px;
+            height: 4px;
+            background-color: #E3E3E3;
+            border-radius: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .navLink {
+        display: none;
+    }
+}

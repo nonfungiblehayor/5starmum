@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$weight400 : 400;
+$weight600 : 600;
+$btnBg : #EBEBEB;
+$brandColor: #EF7528;
+$borderColor: #E3E3E3;
+$textFont: 'Inter', sans-serif;
+
+
+@mixin coldisplayStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin rowdisplayStyle {
+    display: flex;
+    flex-direction: row;
+}
+
+.subHeaderSection {
+    @include rowdisplayStyle();
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .subHeaderSection {
+        @include coldisplayStyle();
+        align-items: center;
+    }
+}

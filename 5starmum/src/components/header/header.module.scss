@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$weight400 : 400;
+$weight600 : 600;
+$btnBg : #EBEBEB;
+$brandColor: #EF7528;
+$borderColor: #E3E3E3;
+
+
+@mixin coldisplayStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin rowdisplayStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerSection {
+    max-width: 100%;
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid $borderColor;
+    .logoDiv {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        img {
+            width: 143px;
+            height: 40px;
+        }
+    }
+    .profileDiv {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .headerSection {
+        max-width: 100%;
+        height: 88px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #FFFFFF;
+        align-items: center;
+        padding: 9px;
+        border-bottom: 1px solid $borderColor;
+        .logoDiv {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            img {
+                width: 80px;
+                height: 22px;
+            }
+        }
+        .profileDiv {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
